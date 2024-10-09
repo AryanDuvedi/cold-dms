@@ -1,0 +1,21 @@
+{
+    "name": "cold-dms",
+    "version": "1.0.0",
+    "description": "A tool for sending cold DMs on Twitter using user authentication.",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js", // Add this line to start your server
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["Twitter", "DM", "bots", "cold outreach"],
+    "author": "Your Name", // Replace with your name or organization
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.20.3",
+      "dotenv": "^16.4.5",
+      "express": "^4.21.1",
+      "twit": "^2.2.11"
+    },
+    "devDependencies": {}
+  }
+  

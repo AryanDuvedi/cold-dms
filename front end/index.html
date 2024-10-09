@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter DM Tools</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Twitter DM Tools</h1>
+        <div class="tools">
+            <div class="tool" id="twitter-cold-dm-tool">
+                <h2>Twitter Cold DM Tool</h2>
+                <div class="step" id="step-1">
+                    <h3>Step 1: Connect to Twitter</h3>
+                    <label for="auth-token">Enter your Auth Token:</label>
+                    <input type="text" id="auth-token" placeholder="Enter your Twitter Auth Token">
+                    <button id="connect-btn">Connect</button>
+                </div>
+
+                <div class="step" id="step-2" style="display: none;">
+                    <h3>Step 2: Upload Google Sheet</h3>
+                    <label for="google-sheet-url">Google Sheet URL:</label>
+                    <input type="text" id="google-sheet-url" placeholder="Enter Google Sheet URL with Target IDs">
+                    <button id="sheet-btn">Validate Google Sheet</button>
+                </div>
+
+                <div class="step" id="step-3" style="display: none;">
+                    <h3>Step 3: DM Settings</h3>
+                    <label for="dm-mode">Select DM Mode:</label>
+                    <select id="dm-mode">
+                        <option value="">-- Select Mode --</option>
+                        <option value="manual">Manual DMs</option>
+                        <option value="automatic">Automatic DMs</option>
+                    </select>
+
+                    <div id="time-frame-section" style="display: none;">
+                        <label for="start-time">Select Start Time for DMs:</label>
+                        <input type="time" id="start-time" name="start-time">
+                        <label for="end-time">Select End Time for DMs:</label>
+                        <input type="time" id="end-time" name="end-time">
+                    </div>
+
+                    <label for="dms-per-day">How many DMs per day?</label>
+                    <input type="number" id="dms-per-day" min="1" max="50" value="40">
+
+                    <button id="launch-btn">Launch DMs</button>
+                </div>
+
+                <div class="result-section" id="result-section" style="display: none;">
+                    <h3>Result</h3>
+                    <p id="result">No result yet.</p>
+                </div>
+            </div>
+
+            <div class="tool" id="engagement-extraction-tool">
+                <h2>Engagement Extraction Tool</h2>
+                <div class="step">
+                    <h3>Step 1: Enter Tweet Link</h3>
+                    <label for="tweet-url">Tweet URL:</label>
+                    <input type="text" id="tweet-url" placeholder="Enter Tweet URL">
+                    <button id="extract-btn">Extract Engagement</button>
+                </div>
+
+                <div class="result-section" id="extraction-result-section" style="display: none;">
+                    <h3>Extraction Result</h3>
+                    <p id="extraction-result">No extraction result yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
